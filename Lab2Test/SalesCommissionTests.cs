@@ -22,7 +22,7 @@ namespace Lab2Test
             Assert.Fail();
         }
 
-        [TestMethod()]
+        [TestMethod()]        
         public void Lt95Test()
         {
             //Arrange
