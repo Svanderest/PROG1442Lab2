@@ -15,8 +15,10 @@ namespace Lab2Library
         {
             get
             {
-                if (Sales < 0 || Quota < 0)
-                    throw new Exception();
+                if (Sales < 0)
+                    throw new ArgumentOutOfRangeException("Sales");
+                else if (Quota <= 0)
+                    throw new ArgumentOutOfRangeException("Quota");
                 return Math.Round(Sales / Quota * 100, 2);
             }
         }
