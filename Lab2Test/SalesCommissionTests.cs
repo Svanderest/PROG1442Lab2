@@ -43,7 +43,7 @@ namespace Lab2Test
             var target = new SalesCommission(95, 100);
 
             //Act
-            double expected = 3;
+            double expected = 0.03;
             double actual = target.CommissionRate;
 
             //Assert
@@ -57,7 +57,7 @@ namespace Lab2Test
             var target = new SalesCommission(99.9, 100);
 
             //Act
-            double expected = 3;
+            double expected = 0.03;
             double actual = target.CommissionRate;
 
             //Assert
@@ -71,7 +71,7 @@ namespace Lab2Test
             var target = new SalesCommission(100, 100);
 
             //Act
-            double expected = 6;
+            double expected = 0.06;
             double actual = target.CommissionRate;
 
             //Assert
@@ -85,7 +85,7 @@ namespace Lab2Test
             var target = new SalesCommission(119.9, 100);
 
             //Act
-            double notExpected = 10.965;
+            double notExpected = 0.10965;
             double actual = target.CommissionRate;
 
             //Assert
@@ -99,7 +99,7 @@ namespace Lab2Test
             var target = new SalesCommission(120.1, 100);
 
             //Act
-            double notExpected = 11.025;
+            double notExpected = 0.11025;
             double actual = target.CommissionRate;
 
             //Assert
@@ -113,7 +113,7 @@ namespace Lab2Test
             var target = new SalesCommission(149.9, 100);
 
             //Act
-            double notExtpected = 21.445;
+            double notExtpected = 0.21445;
             double actual = target.CommissionRate;
 
             //Assert
@@ -127,7 +127,7 @@ namespace Lab2Test
             var target = new SalesCommission(150.1, 100);
 
             //Act
-            double notExtpected = 21.535;
+            double notExtpected = 0.21535;
             double actual = target.CommissionRate;
 
             //Assert

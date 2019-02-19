@@ -9,6 +9,47 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
 
+        <TextBlock Name="lblTitle" Text="Comissions Calculator" Grid.Row="0" Grid.Column="1"></TextBlock>
+
+        <TextBlock Name="lblQuta" Text="Sales Quota" Grid.Row="1" Grid.Column="0"></TextBlock>
+        <TextBox Name="txtQuota" Grid.Row="1" Grid.Column="1"></TextBox>
+
+        <TextBlock Name="lblSales" Text="Total Sales" Grid.Row="2" Grid.Column="0"></TextBlock>
+        <TextBox Name="txtSales" Grid.Row="2" Grid.Column="1"></TextBox>
+
+        <TextBlock Name="lblSalary" Text="Salary" Grid.Row="3" Grid.Column="0"></TextBlock>
+        <TextBox Name="txtSalary" Grid.Row="3" Grid.Column="1"></TextBox>
+
+        <Button Name="btnCalculate" Click="btnCalculate_Click" Grid.Row="4" Grid.Column="1">Calculate</Button>
+
+        <TextBlock Name="lblError" Text="" Foreground="Red" Grid.Row="5" Grid.Column="1"></TextBlock>
+
+        <TextBlock Name="lblPercent" Text="Percent of Quota" Grid.Row="6" Grid.Column="0"></TextBlock>
+        <TextBlock Name="lblPercentOut" Text="" Grid.Row="6" Grid.Column="1"></TextBlock>
+
+        <TextBlock Name="lblRate" Text="Commission Rate" Grid.Row="7" Grid.Column="0"></TextBlock>
+        <TextBlock Name="lblRateOut" Text="" Grid.Row="7" Grid.Column="1"></TextBlock>
+
+        <TextBlock Name="lblCommission" Text="Commission Earned" Grid.Row="8" Grid.Column="0"></TextBlock>
+        <TextBlock Name="lblCommissionOut" Text="" Grid.Row="8" Grid.Column="1"></TextBlock>
+
+        <Button Name="btnClear" Click="btnClear_Click" Grid.Row="9" Grid.Column="1">Clear</Button>
     </Grid>
 </Page>
