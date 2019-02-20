@@ -44,10 +44,12 @@ namespace Lab2App
             {
                 try
                 {
-                    SalesCommission salesCommission = new SalesCommission(sales, quota, salary);
-                    lblCommissionOut.Text = salesCommission.Commission.ToString("C2");
-                    lblPercentOut.Text = salesCommission.PercentOfQuota.ToString("P2");
-                    lblRateOut.Text = salesCommission.CommissionRate.ToString("P2");
+                    double percent = SalesCommission.PercentOfQuota(sales, quota);
+                    double rate = SalesCommission.CommissionRate(percent);
+                    double commission = rate * salary;                    
+                    lblCommissionOut.Text = commission.ToString("C2");
+                    lblPercentOut.Text = percent.ToString("P2");
+                    lblRateOut.Text = rate.ToString("P2");
                 }
                 catch (ArgumentOutOfRangeException ex)
                 {
