@@ -8,6 +8,30 @@ namespace Lab2Library
 {
     public class SalesCommission
     {
+        public static double PercentOfquota(double sales, double quota)
+        {
+            if (sales < 0)
+                throw new ArgumentOutOfRangeException("sales");
+            if (quota <= 0)
+                throw new ArgumentOutOfRangeException("quota");
+            return Math.Round(sales / quota, 2);
+        }
+
+        public static double Commissionrate(double percent)
+        {
+            if (percent < 0.95)
+                return 0;
+            else if (percent < 1)
+                return 0.03;
+            else if (percent < 1.20)
+                return 0.25 * percent - 0.19;
+            else if (percent < 1.50)
+                return 0.35 * percent - 0.31;
+            else
+                return 0.45 * percent - 0.46;
+        }
+
+
         private double Sales;
         private double Quota;
         private double Salary;

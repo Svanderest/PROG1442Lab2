@@ -10,27 +10,44 @@ namespace Lab2Test
     {
         [TestMethod()] 
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void NegativeQuotaTest()
+        public void ZeroQuotaTest()
         {
-            //Arrange
-            var target = new SalesCommission(-1, -1);
 
             //Act
-            double actual = target.PercentOfQuota;
+            SalesCommission.PercentOfquota(1,0);
 
             //Assert
             Assert.Fail();
         }
 
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void NegativeSalesTest()
+        {
+            //Act
+            SalesCommission.PercentOfquota(-5, 5);
+
+            //Assert
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void PercentTest()
+        {
+            //Act
+            double expected = 1;
+            double actual = SalesCommission.PercentOfquota(1, 1);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
         [TestMethod()]        
         public void Lt95Test()
-        {
-            //Arrange
-            var target = new SalesCommission(94.9, 100);
-
+        {            
             //Act
             double expected = 0;
-            double actual = target.CommissionRate;
+            double actual = SalesCommission.Commissionrate(0.949);
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -38,13 +55,10 @@ namespace Lab2Test
 
         [TestMethod()]
         public void Eq95Test()
-        {
-            //Arrange
-            var target = new SalesCommission(95, 100);
-
+        {            
             //Act
             double expected = 0.03;
-            double actual = target.CommissionRate;
+            double actual = SalesCommission.Commissionrate(0.95);
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -52,13 +66,10 @@ namespace Lab2Test
 
         [TestMethod()]
         public void Lt100Test()
-        {
-            //Arrange
-            var target = new SalesCommission(99.9, 100);
-
+        {            
             //Act
             double expected = 0.03;
-            double actual = target.CommissionRate;
+            double actual = SalesCommission.Commissionrate(0.999);
 
             //Assert
             Assert.AreEqual(expected, actual);
